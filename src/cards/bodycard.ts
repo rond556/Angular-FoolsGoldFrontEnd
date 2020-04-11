@@ -7,6 +7,6 @@ export class BodyCard extends Card{
         this.name = "Body Card";
         this.imageUrl = "";
         this.type = "Basic Attribute"
-        this.cap = 2;
+        this.cap = 8;
     }
 }
