@@ -26,7 +26,7 @@ export class Deck{
                 this.cards.push(new PartialSuccessCard);
             }
             if(i <= 1){
-                this.cards.push.apply(new SilverSuccessCard);
+                this.cards.push(new SilverSuccessCard);
             }
         }
     }
