@@ -6,12 +6,12 @@ export class Card{
     imageUrl: String;
     cap:number;
 
-    constructor(){
-        this.skillPointValue = 0;
-        this.name = "";
-        this.imageUrl = "";
-        this.type = "";
-        this.cap = 0;
+    constructor(skillPointValue: number, name: string, imageUrl: String, type: String, cap: number){
+        this.skillPointValue = skillPointValue;
+        this.name = name;
+        this.imageUrl = imageUrl;
+        this.type = type;
+        this.cap = cap;
     }
 
     getSkillPointValue(){
