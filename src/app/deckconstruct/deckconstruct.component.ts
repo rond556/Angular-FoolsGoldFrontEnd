@@ -22,6 +22,7 @@ import { GoldSuccessCard } from 'src/cards/goldsuccess';
 export class DeckconstructComponent implements OnInit {
   deck:Deck;
   cards:Array<Card>;
+  purchasedCards:Array<Card>
   bodyCard:BodyCard;
   mindCard:MindCard;
   faceCard:FaceCard;
@@ -40,6 +41,7 @@ export class DeckconstructComponent implements OnInit {
 
   constructor() {
     this.deck = new Deck;
+    this.purchasedCards = new Array<Card>();
     this.bodyCard = new BodyCard;
     this.mindCard = new MindCard;
     this.faceCard = new FaceCard;
@@ -59,6 +61,6 @@ export class DeckconstructComponent implements OnInit {
   }
 
   addCard(card:Card){
-    this.deck.addCard(card);
+    this.purchasedCards.push(card);
   }
 }

@@ -28,6 +28,7 @@ export class Deck{
                 this.cards.push(new SilverSuccessCard);
             }
         }
+    
     }
 
     getCards(){

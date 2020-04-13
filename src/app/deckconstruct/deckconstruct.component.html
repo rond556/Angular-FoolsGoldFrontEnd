@@ -1,3 +1,7 @@
+<div class="container">
+  <img id="shopkeep" src="https://github.com/rond556/Angular-FoolsGoldFrontEnd/blob/master/src/assets/nopperabou.png?raw=true">
+</div>
+<div class="container" id="buttons">
 <button class="addCard" (click)="addCard(bodyCard)">Add Body Card</button>
 <button class="addCard" (click)="addCard(mindCard)">Add Mind Card</button>
 <button class="addCard" (click)="addCard(faceCard)">Add Face Card</button>
@@ -10,10 +14,11 @@
 <button class="addCard" (click)="addCard(bronzeSuccessCard)">Add Bronze Success Card</button>
 <button class="addCard" (click)="addCard(silverSuccessCard)">Add Silver Success Card</button>
 <button class="addCard" (click)="addCard(goldSuccessCard)">Add Gold Success Card</button>
+</div>
 
 <div id="deckDisplay" class="container">
     <div class="grid-row">
-      <div *ngFor="let card of deck.getCards()">
+      <div *ngFor="let card of purchasedCards">
         <img src={{card.imageUrl}} id="cardImage" alt="card-image">
   </div>
   
