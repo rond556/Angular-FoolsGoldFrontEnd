@@ -1,13 +1,8 @@
-<div id="deckDisplay" class="container">
-  <div class="grid-row">
-    <div *ngFor="let card of cards">
-      {{card.name}}
-</div>
-
-<button class="drawCards" (click)="drawCards(this.birthyear + 10)">Draw Eight Cards</button>
+<button class="drawCards" (click)="drawCards()">Draw Eight Cards</button>
 
 <div id="deckDisplay" class="container">
     <div class="grid-row">
       <div *ngFor="let card of cardDraw">
         {{card.name}}
-  </div>
+</div>
+

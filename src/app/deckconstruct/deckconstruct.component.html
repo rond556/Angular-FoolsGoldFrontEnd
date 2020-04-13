@@ -1,0 +1,21 @@
+<button class="addCard" (click)="addCard(bodyCard)">Add Body Card</button>
+<button class="addCard" (click)="addCard(mindCard)">Add Mind Card</button>
+<button class="addCard" (click)="addCard(faceCard)">Add Face Card</button>
+<button class="addCard" (click)="addCard(bodyMindCard)">Add Body/Mind Card</button>
+<button class="addCard" (click)="addCard(bodyFaceCard)">Add Body/Mind Card</button>
+<button class="addCard" (click)="addCard(mindFaceCard)">Add Mind/Face Card</button>
+<button class="addCard" (click)="addCard(bodyMindFaceCard)">Add Body/Mind/Face Card</button>
+<button class="addCard" (click)="addCard(failureCard)">Add Failure Card</button>
+<button class="addCard" (click)="addCard(partialSuccessCard)">Add Partial Success Card</button>
+<button class="addCard" (click)="addCard(bronzeSuccessCard)">Add Bronze Success Card</button>
+<button class="addCard" (click)="addCard(silverSuccessCard)">Add Silver Success Card</button>
+<button class="addCard" (click)="addCard(goldSuccessCard)">Add Gold Success Card</button>
+
+<div id="deckDisplay" class="container">
+    <div class="grid-row">
+      <div *ngFor="let card of deck.getCards()">
+        {{card.name}}
+  </div>
+  
+
+

@@ -6,11 +6,13 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DeckdisplayComponent } from './deckdisplay/deckdisplay.component';
+import { DeckconstructComponent } from './deckconstruct/deckconstruct.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DeckdisplayComponent
+    DeckdisplayComponent,
+    DeckconstructComponent
   ],
   imports: [
     BrowserModule,

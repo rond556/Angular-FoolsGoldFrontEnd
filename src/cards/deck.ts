@@ -9,7 +9,6 @@ import { SilverSuccessCard } from './silversuccess';
 
 export class Deck{
     cards: Array<Card>;
-    bronzeSuccessCard: BronzeSuccessCard
 
 
     constructor(){
