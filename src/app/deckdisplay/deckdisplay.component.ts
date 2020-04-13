@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Deck } from 'src/cards/deck';
+import { Card } from 'src/cards/cardparent';
 
 @Component({
   selector: 'app-deckdisplay',
@@ -8,13 +9,15 @@ import { Deck } from 'src/cards/deck';
 })
 export class DeckdisplayComponent implements OnInit {
   deck:Deck;
+  cards:Array<Card>;
 
-  constructor(deck: Deck) {
-    this.deck = deck;
+  constructor() {
+    this.deck = new Deck;
+    this.cards = this.deck.getCards();
   }
 
   ngOnInit() {
-    
+    this.cards.forEach(card => console.log(card.getName));
+      
   }
-
 }
