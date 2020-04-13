@@ -1,3 +1,7 @@
+#cardImage{
+    width: 200px;
+}
+
 .grid-row {
     display: flex;
     flex-flow: row wrap;
