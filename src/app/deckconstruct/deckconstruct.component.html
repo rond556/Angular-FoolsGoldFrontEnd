@@ -14,7 +14,7 @@
 <div id="deckDisplay" class="container">
     <div class="grid-row">
       <div *ngFor="let card of deck.getCards()">
-        {{card.name}}
+        <img src={{card.imageUrl}} alt="card-image">
   </div>
   
 

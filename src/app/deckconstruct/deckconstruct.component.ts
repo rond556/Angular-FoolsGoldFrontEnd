@@ -55,7 +55,7 @@ export class DeckconstructComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.deck.getCards().forEach(card => console.log(card.getName));
+    
   }
 
   addCard(card:Card){
