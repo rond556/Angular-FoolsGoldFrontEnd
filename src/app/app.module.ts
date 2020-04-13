@@ -9,7 +9,6 @@ import { DeckdisplayComponent } from './deckdisplay/deckdisplay.component';
 import { DeckconstructComponent } from './deckconstruct/deckconstruct.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
-import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +17,6 @@ import { FooterComponent } from './footer/footer.component';
     DeckconstructComponent,
     NavbarComponent,
     HomeComponent,
-    FooterComponent
   ],
   imports: [
     BrowserModule,

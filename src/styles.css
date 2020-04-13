@@ -1,6 +1,6 @@
 body{
-    background-image: url("https://github.com/rond556/Angular-FoolsGoldFrontEnd/blob/master/src/assets/2chanyokai.jpg?raw=true");
+    background-image: url("https://github.com/rond556/Angular-FoolsGoldFrontEnd/blob/master/src/assets/2chanyokaidark.jpg?raw=true");
     background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
