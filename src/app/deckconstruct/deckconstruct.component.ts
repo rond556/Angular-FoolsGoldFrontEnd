@@ -1,18 +1,18 @@
 import { Component, OnInit } from '@angular/core';
-import { Deck } from 'src/cards/deck';
-import { Card } from 'src/cards/cardparent';
-import { MindCard } from 'src/cards/mindcard';
-import { BodyCard } from 'src/cards/bodycard';
-import { FaceCard } from 'src/cards/facecard';
-import { BodyMindCard } from 'src/cards/bodymindcard';
-import { BodyFaceCard } from 'src/cards/bodyfacecard';
-import { MindFaceCard } from 'src/cards/mindfacecard';
-import { BodyMindFaceCard } from 'src/cards/bodyminddacecard';
-import { FailureCard } from 'src/cards/failurecard';
-import { PartialSuccessCard } from 'src/cards/partialsuccesscard';
-import { BronzeSuccessCard } from 'src/cards/bronzesuccesscard';
-import { SilverSuccessCard } from 'src/cards/silversuccess';
-import { GoldSuccessCard } from 'src/cards/goldsuccess';
+import { Deck } from 'src/models/deck';
+import { Card } from 'src/models/cardparent';
+import { MindCard } from 'src/models/mindcard';
+import { BodyCard } from 'src/models/bodycard';
+import { FaceCard } from 'src/models/facecard';
+import { BodyMindCard } from 'src/models/bodymindcard';
+import { BodyFaceCard } from 'src/models/bodyfacecard';
+import { MindFaceCard } from 'src/models/mindfacecard';
+import { BodyMindFaceCard } from 'src/models/bodyminddacecard';
+import { FailureCard } from 'src/models/failurecard';
+import { PartialSuccessCard } from 'src/models/partialsuccesscard';
+import { BronzeSuccessCard } from 'src/models/bronzesuccesscard';
+import { SilverSuccessCard } from 'src/models/silversuccess';
+import { GoldSuccessCard } from 'src/models/goldsuccess';
 
 @Component({
   selector: 'app-deckconstruct',

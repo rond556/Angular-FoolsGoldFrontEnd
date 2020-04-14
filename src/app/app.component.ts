@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Deck } from 'src/cards/deck';
+import { Deck } from 'src/models/deck';
 
 @Component({
   selector: 'app-root',
