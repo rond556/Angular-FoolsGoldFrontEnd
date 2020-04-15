@@ -7,7 +7,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DeckdisplayComponent } from './deckdisplay/deckdisplay.component';
 import { DeckconstructComponent } from './deckconstruct/deckconstruct.component';
-import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 
 @NgModule({
@@ -15,7 +14,6 @@ import { HomeComponent } from './home/home.component';
     AppComponent,
     DeckdisplayComponent,
     DeckconstructComponent,
-    NavbarComponent,
     HomeComponent,
   ],
   imports: [

@@ -2,10 +2,24 @@
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.75)), url("https://github.com/rond556/Angular-FoolsGoldFrontEnd/blob/master/src/assets/backgrounds/046d75f81a4a9ef7ac96b7d68362eca5.jpg?raw=true");
     background-position: center;
     background-size: cover;
+    background-repeat: no-repeat;
 }
 
-#daruma{
-    padding-left: auto;
-    padding-right: auto;
 
+#daruma{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 25%;
+    width: 75%;
+    -webkit-transition: -webkit-transform .8s ease-in-out;
+          transition:         transform .8s ease-in-out;
+}
+
+#daruma:hover{
+    -webkit-transform: rotate(90deg);     /* Chrome and other webkit browsers */
+  -moz-transform: rotate(900deg);        /* FF */
+  -o-transform: rotate(90deg);          /* Opera */
+  -ms-transform: rotate(90deg);         /* IE9 */
+  transform: rotate(90deg); 
 }
