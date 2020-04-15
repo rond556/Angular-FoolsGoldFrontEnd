@@ -8,7 +8,7 @@
   <p id="skillnumber">{{this.skillPoints}}</p>
 </div>
 <div>
-<img class="addCard" src="{{this.coins[0].getImageURL()}}" (click)="addCard(bodyCard)">
+<img class="addCard" src="{{this.coins[0].getImageURL()}}" (click)="addCard(bodyCard)" onmouseover="playDrumAudio()">
 <img class="addCard" src="{{this.coins[1].getImageURL()}}" (click)="addCard(mindCard)">
 <img class="addCard" src="{{this.coins[2].getImageURL()}}" (click)="addCard(faceCard)">
 <img class="addCard" src="{{this.coins[3].getImageURL()}}" (click)="addCard(bodyFaceCard)">
@@ -28,6 +28,3 @@
       <div *ngFor="let card of purchasedCards">
         <img src={{card.imageUrl}} id="cardImage" alt="card-image">
   </div>
-  
-
-
