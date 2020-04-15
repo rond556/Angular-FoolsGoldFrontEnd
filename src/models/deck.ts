@@ -1,11 +1,11 @@
-import { Card } from './cardparent';
-import { MindCard } from './mindcard';
-import { BodyCard } from './bodycard';
-import { FaceCard } from './facecard';
-import { FailureCard } from './failurecard';
-import { PartialSuccessCard } from './partialsuccesscard';
-import { BronzeSuccessCard } from './bronzesuccesscard';
-import { SilverSuccessCard } from './silversuccess';
+import { Card } from './cardmodels/cardparent';
+import { MindCard } from './cardmodels/mindcard';
+import { BodyCard } from './cardmodels/bodycard';
+import { FaceCard } from './cardmodels/facecard';
+import { FailureCard } from './cardmodels/failurecard';
+import { PartialSuccessCard } from './cardmodels/partialsuccesscard';
+import { BronzeSuccessCard } from './cardmodels/bronzesuccesscard';
+import { SilverSuccessCard } from './cardmodels/silversuccess';
 
 export class Deck{
     cards: Array<Card>;

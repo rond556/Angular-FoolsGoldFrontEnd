@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Deck } from 'src/models/deck';
-import { Card } from 'src/models/cardparent';
+import { Card } from 'src/models/cardmodels/cardparent';
 
 @Component({
   selector: 'app-deckdisplay',
