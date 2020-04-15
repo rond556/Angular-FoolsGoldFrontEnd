@@ -13,6 +13,8 @@ import { PartialSuccessCard } from 'src/models/cardmodels/partialsuccesscard';
 import { BronzeSuccessCard } from 'src/models/cardmodels/bronzesuccesscard';
 import { SilverSuccessCard } from 'src/models/cardmodels/silversuccess';
 import { GoldSuccessCard } from 'src/models/cardmodels/goldsuccess';
+import { Money } from 'src/models/moneymodels/moneyparent';
+import { Coins } from 'src/models/coins';
 
 @Component({
   selector: 'app-deckconstruct',
@@ -23,6 +25,9 @@ export class DeckconstructComponent implements OnInit {
   deck:Deck;
   cards:Array<Card>;
   purchasedCards:Array<Card>
+  money:Coins;
+  coins:Array<Money>;
+
   bodyCard:BodyCard;
   mindCard:MindCard;
   faceCard:FaceCard;
@@ -42,7 +47,10 @@ export class DeckconstructComponent implements OnInit {
 
   constructor() {
     this.deck = new Deck;
+    this.money = new Coins;
+    this.coins = this.money.getCoins();
     this.purchasedCards = new Array<Card>();
+
     this.bodyCard = new BodyCard;
     this.mindCard = new MindCard;
     this.faceCard = new FaceCard;
@@ -63,7 +71,9 @@ export class DeckconstructComponent implements OnInit {
   }
 
   addCard(card:Card){
-    this.purchasedCards.push(card);
-    this.skillPoints -= card.getSkillPointValue();
+    if(this.skillPoints - card.getSkillPointValue() >= 0 && this.purchasedCards.length <= 40){
+      this.purchasedCards.push(card);
+      this.skillPoints -= card.getSkillPointValue();
+    }
   }
 }
