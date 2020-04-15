@@ -1,18 +1,36 @@
+#village{
+    height: 33%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://github.com/rond556/Angular-FoolsGoldFrontEnd/blob/master/src/assets/backgrounds/mountainvillage.jpg?raw=true");
+    background-position: center;
+    background-size: cover;
+}
+
 #shopkeep{
     width: 33%;
-    margin-top: 40px;
     display: block;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 20px;
-    border:whitesmoke;
+    filter: brightness(50%);
+    border: whitesmoke;
     border-style: solid;
-    border-radius: 10px;
+    border-radius: 5px;    
 }
 
-#village{
-    background-image: url("https://github.com/rond556/Angular-FoolsGoldFrontEnd/blob/master/src/assets/backgrounds/mountainvillage.jpg?raw=true")
+#skillpointcounter{
+    font-family: fantasy;
+    color:whitesmoke;
 }
+
+#skillpointsremain{
+    font-size: x-large;
+}
+
+#skillnumber{
+    font-size: x-large;
+    margin-left: 30px;
+}
+
 
 #cardImage{
     width: 200px;

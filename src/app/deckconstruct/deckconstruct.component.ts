@@ -35,6 +35,7 @@ export class DeckconstructComponent implements OnInit {
   bronzeSuccessCard:BronzeSuccessCard;
   silverSuccessCard:SilverSuccessCard;
   goldSuccessCard:GoldSuccessCard;
+  skillPoints: number;
 
   
   
@@ -54,6 +55,7 @@ export class DeckconstructComponent implements OnInit {
     this.bronzeSuccessCard = new BronzeSuccessCard;
     this.silverSuccessCard = new SilverSuccessCard;
     this.goldSuccessCard = new GoldSuccessCard;
+    this.skillPoints = 15;
   }
 
   ngOnInit() {
@@ -62,5 +64,6 @@ export class DeckconstructComponent implements OnInit {
 
   addCard(card:Card){
     this.purchasedCards.push(card);
+    this.skillPoints -= card.getSkillPointValue();
   }
 }
