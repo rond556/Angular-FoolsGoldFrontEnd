@@ -1,5 +1,5 @@
 #village{
-    height: 33%;
+    height: 25%;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://github.com/rond556/Angular-FoolsGoldFrontEnd/blob/master/src/assets/backgrounds/mountainvillage.jpg?raw=true");
     background-position: center;
     background-size: cover;
@@ -35,6 +35,15 @@
 #cardImage{
     width: 200px;
     border-radius: 5px;
+}
+
+.addCard{
+    width: 9%;
+}
+
+.addCard:hover{
+    position:relative; top: -5px;
+    box-shadow: 0px 0px 5px yellow;
 }
 
 .grid-row {

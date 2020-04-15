@@ -41,6 +41,7 @@ export class DeckconstructComponent implements OnInit {
   silverSuccessCard:SilverSuccessCard;
   goldSuccessCard:GoldSuccessCard;
   skillPoints: number;
+  level:number;
 
   
   
@@ -50,6 +51,7 @@ export class DeckconstructComponent implements OnInit {
     this.money = new Coins;
     this.coins = this.money.getCoins();
     this.purchasedCards = new Array<Card>();
+    this.level = 1;
 
     this.bodyCard = new BodyCard;
     this.mindCard = new MindCard;
@@ -67,7 +69,7 @@ export class DeckconstructComponent implements OnInit {
   }
 
   ngOnInit() {
-    
+    console.log(this.coins)
   }
 
   addCard(card:Card){

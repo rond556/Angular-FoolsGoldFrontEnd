@@ -24,11 +24,11 @@ export class Coins{
         this.coins.push(new BodyMindCardMoney);
         this.coins.push(new FaceMindCardMoney);
         this.coins.push(new MindBodyFaceCardMoney);
-        this.coins.push(new BronzeSuccessCardMoney);
         this.coins.push(new PartialSuccessCardMoney);
+        this.coins.push(new BronzeSuccessCardMoney);
         this.coins.push(new SilverSuccessCardMoney);
-        this.coins.push(new GoldSuccessCardMoney);
         this.coins.push(new FailureCardMoney);
+        this.coins.push(new GoldSuccessCardMoney);
     }
     
     getCoins(){
