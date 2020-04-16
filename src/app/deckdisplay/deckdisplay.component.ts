@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Deck } from 'src/models/deck';
 import { Card } from 'src/models/cardmodels/cardparent';
+import { DeckService } from '../services/deck.service';
 
 @Component({
   selector: 'app-deckdisplay',
@@ -12,13 +13,14 @@ export class DeckdisplayComponent implements OnInit {
   cards:Array<Card>;
   cardDraw: Array<Card>;
 
-  constructor() {
-    this.deck = new Deck;
+  constructor(private deckService: DeckService) {
+    this.deck = this.deckService.getDeck();
     this.cards = this.deck.getCards();
   }
 
   ngOnInit() {
     this.cards.forEach(card => console.log(card.getName));
+    console.log(this.cards.length)
   }
 
   drawCards(){

@@ -15,6 +15,7 @@ import { SilverSuccessCard } from 'src/models/cardmodels/silversuccess';
 import { GoldSuccessCard } from 'src/models/cardmodels/goldsuccess';
 import { Money } from 'src/models/moneymodels/moneyparent';
 import { Coins } from 'src/models/coins';
+import { DeckService } from "src/app/services/deck.service";
 
 @Component({
   selector: 'app-deckconstruct',
@@ -46,8 +47,9 @@ export class DeckconstructComponent implements OnInit {
   
   
 
-  constructor() {
+  constructor(private deckService: DeckService) {
     this.deck = new Deck;
+    this.cards = this.deck.getCards();
     this.money = new Coins;
     this.coins = this.money.getCoins();
     this.purchasedCards = new Array<Card>();
@@ -82,5 +84,13 @@ export class DeckconstructComponent implements OnInit {
     let index = this.purchasedCards.indexOf(card);
     this.skillPoints += card.getSkillPointValue();
     this.purchasedCards.splice(index,1);
+  }
+
+  createFullDeck(){
+    for(let i = 0; i < this.purchasedCards.length; i++){
+      this.cards.push(this.purchasedCards[i]);
+    }
+    this.deck.setCards(this.cards);
+    this.deckService.setDeck(this.deck);
   }
 }

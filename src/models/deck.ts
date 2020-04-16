@@ -38,4 +38,8 @@ export class Deck{
     addCard(card:Card){
         this.cards.push(card);
     }
+
+    setCards(cards: Array<Card>){
+        this.cards = cards;
+    }
 }
