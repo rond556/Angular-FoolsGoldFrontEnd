@@ -9,6 +9,7 @@ import { DeckdisplayComponent } from './deckdisplay/deckdisplay.component';
 import { DeckconstructComponent } from './deckconstruct/deckconstruct.component';
 import { HomeComponent } from './home/home.component';
 import { FormsModule } from '@angular/forms';
+import { NavbarComponent } from './navbar/navbar.component';
 
 
 @NgModule({
@@ -17,6 +18,7 @@ import { FormsModule } from '@angular/forms';
     DeckdisplayComponent,
     DeckconstructComponent,
     HomeComponent,
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,
