@@ -21,8 +21,7 @@ export class DeckdisplayComponent implements OnInit {
   numberOfCards: Number;
 
   constructor(private deckService: DeckService) {
-    this.deck = new Deck();
-    //this.deck = this.deckService.getDeck();
+    this.deck = this.deckService.getDeck();
     this.cards = this.deck.getCards();
     this.numberOfCards = 8;
   }
