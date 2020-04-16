@@ -12,11 +12,21 @@
     margin-right: auto;
 }
 
+#carddraw{
+    padding-top: 30px;
+    font-family: fantasy;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .drawCards{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 25%
+    height: 300px;
+    margin-top: 10%
 }
 
 #cardImage{

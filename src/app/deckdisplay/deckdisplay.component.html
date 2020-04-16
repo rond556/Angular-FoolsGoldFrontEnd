@@ -4,7 +4,7 @@
     <input type="number" placeholder="Number of Cards" [(ngModel)]="this.numberOfCards">
   </div>
     <div *ngIf="this.numberOfCards < 41" >
-      <button class="drawCards" (click)="drawCards()">Draw</button>
+      <img class="drawCards" src="https://github.com/rond556/Angular-FoolsGoldFrontEnd/blob/master/src/assets/characters/koifish.png?raw=true" (click)="drawCards()">
         <div id="deckgrid" class="container">
           <div class="grid-row">
             <div *ngFor="let card of cardDraw">
