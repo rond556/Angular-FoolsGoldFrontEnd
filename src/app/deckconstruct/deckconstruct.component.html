@@ -5,19 +5,20 @@
 
 <div class="container" id="pointcounter">
   <div id="skillpoints">
-  <p id="skillpointsremain">Skill points remaining</p>
-  <p id="skillnumber">{{this.skillPoints}}</p>
-</div>
+    <p id="skillpointsremain">Skill Points Remaining</p>
+    <p id="skillnumber">{{this.skillPoints}}</p>
+  </div>
   <div id="remainingcards">
     <p id="cardsremaining">Cards Remaining</p>
     <p id="cardsnumber">{{15 - this.purchasedCards.length}}</p>
   </div>
-  <div class="container" *ngIf="this.skillPoints < 2 && purchasedCards.length < 16">
-    <a routerlink="/deckdisplay" routerLinkActive="active">
-    <img id="koifish" src="https://github.com/rond556/Angular-FoolsGoldFrontEnd/blob/master/src/assets/characters/japanesekoifish.png?raw=true">
+  <div id="koifish" *ngIf="this.skillPoints < 2 && purchasedCards.length < 16">
+    <a routerLink="/deckdisplay" routerLinkActive="active">
+    <p>Purchase Deck</p>
     </a>
   </div>
 </div>
+
 
 
 <div class="containers">
@@ -41,3 +42,5 @@
       <div *ngFor="let card of purchasedCards">
         <img src={{card.imageUrl}} id="cardImage" alt="card-image" (click)="removeCard(this.card)">
   </div>
+
+  
