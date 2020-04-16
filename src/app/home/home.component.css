@@ -12,14 +12,16 @@
     margin-right: auto;
     padding-top: 25%;
     width: 75%;
-    -webkit-transition: -webkit-transform .8s ease-in-out;
-          transition:         transform .8s ease-in-out;
+    transform-origin: bottom center;
+    transition: ease-out .8s;
 }
 
 #daruma:hover{
-    -webkit-transform: rotate(90deg);     /* Chrome and other webkit browsers */
-  -moz-transform: rotate(900deg);        /* FF */
-  -o-transform: rotate(90deg);          /* Opera */
-  -ms-transform: rotate(90deg);         /* IE9 */
-  transform: rotate(90deg); 
+    -webkit-transform: rotate(45deg);     /* Chrome and other webkit browsers */
+  -moz-transform: rotate(45deg);        /* FF */
+  -o-transform: rotate(45deg);          /* Opera */
+  -ms-transform: rotate(45deg);         /* IE9 */
+  transform: rotate(45deg); 
+  transform-origin: bottom center;
+  transition: ease-in .8s;
 }
