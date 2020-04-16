@@ -1,3 +1,4 @@
+<div id="my-container">
 <button class="drawCards" (click)="drawCards()">Draw Eight Cards</button>
 
 <div id="deckgrid" class="container">
@@ -5,4 +6,4 @@
       <div *ngFor="let card of cardDraw">
         <img src={{card.imageUrl}} id="cardImage" alt="card-image">
 </div>
-
+</div>

@@ -14,13 +14,12 @@ export class DeckdisplayComponent implements OnInit {
   cardDraw: Array<Card>;
 
   constructor(private deckService: DeckService) {
-    this.deck = this.deckService.getDeck();
+    this.deck = new Deck();
+    //this.deck = this.deckService.getDeck();
     this.cards = this.deck.getCards();
   }
 
   ngOnInit() {
-    this.cards.forEach(card => console.log(card.getName));
-    console.log(this.cards.length)
   }
 
   drawCards(){

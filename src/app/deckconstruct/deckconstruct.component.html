@@ -12,7 +12,7 @@
     <p id="cardsremaining">Cards Remaining</p>
     <p id="cardsnumber">{{15 - this.purchasedCards.length}}</p>
   </div>
-  <div id="koifish" *ngIf="this.skillPoints < 2 && purchasedCards.length < 16">
+  <div id="koifish" *ngIf="purchasedCards.length < 16">
     <a routerLink="/deckdisplay" (click)="createFullDeck()" routerLinkActive="active">
     <p>Purchase Deck</p>
     </a>
@@ -22,7 +22,7 @@
 
 
 <div class="containers">
-<img class="addCard" src="{{this.coins[0].getImageURL()}}" (click)="addCard(bodyCard)" onmouseover="playDrumAudio()">
+<img class="addCard" src="{{this.coins[0].getImageURL()}}" (click)="addCard(bodyCard)">
 <img class="addCard" src="{{this.coins[1].getImageURL()}}" (click)="addCard(mindCard)">
 <img class="addCard" src="{{this.coins[2].getImageURL()}}" (click)="addCard(faceCard)">
 <img class="addCard" src="{{this.coins[3].getImageURL()}}" (click)="addCard(bodyFaceCard)">
