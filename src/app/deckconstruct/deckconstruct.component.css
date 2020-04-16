@@ -1,6 +1,6 @@
 #village{
     height: 25%;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("src/assets/backgrounds/mountainvillage.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://github.com/rond556/Angular-FoolsGoldFrontEnd/blob/master/src/assets/backgrounds/mountainvillage.jpg?raw=true");
     background-position: center;
     background-size: cover;
 }
