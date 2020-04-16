@@ -17,17 +17,22 @@
     border-radius: 5px;    
 }
 
-#skillpointcounter{
+#pointcounter{
     font-family: fantasy;
     color:whitesmoke;
+    font-size: x-large;
+    float:right;
 }
 
-#skillpointsremain{
-    font-size: x-large;
+#remainingcards{
+    float: left;
 }
 
 #skillnumber{
-    font-size: x-large;
+    margin-left: 30px;
+}
+
+#cardsnumber{
     margin-left: 30px;
 }
 
@@ -38,7 +43,7 @@
 }
 
 .addCard{
-    width: 9%;
+    width: 7.5%;
 }
 
 .addCard:hover{

@@ -69,13 +69,18 @@ export class DeckconstructComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log(this.coins)
+
   }
 
   addCard(card:Card){
-    if(this.skillPoints - card.getSkillPointValue() >= 0 && this.purchasedCards.length <= 40){
+    if(this.skillPoints - card.getSkillPointValue() >= 0 && this.purchasedCards.length < 15){
       this.purchasedCards.push(card);
       this.skillPoints -= card.getSkillPointValue();
     }
+  }
+  removeCard(card:Card){
+    let index = this.purchasedCards.indexOf(card);
+    this.skillPoints += card.getSkillPointValue();
+    this.purchasedCards.splice(index,1);
   }
 }
