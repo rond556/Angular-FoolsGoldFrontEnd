@@ -4,9 +4,9 @@ export class Money{
 
     constructor(name:String, imageURL:String){
         this.name = name;
-        this.imageURL = "https://github.com/rond556/Angular-FoolsGoldFrontEnd/blob/master/src/assets/cardmoney/" + imageURL + ".png?raw=true";
+        this.imageURL = "src/assets/cardmoney/" + imageURL + ".png";
     }
-
+    
     getName(){
         return this.name;
     }

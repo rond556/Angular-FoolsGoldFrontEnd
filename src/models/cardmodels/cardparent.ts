@@ -9,7 +9,7 @@ export class Card{
     constructor(skillPointValue: number, name: string, imageUrl: String, type: String, cap: number){
         this.skillPointValue = skillPointValue;
         this.name = name;
-        this.imageUrl = "https://github.com/rond556/Angular-FoolsGoldFrontEnd/blob/master/src/assets/cardimages/" + imageUrl + ".jpg?raw=true";
+        this.imageUrl = "src/assets/cardimages/" + imageUrl +".jpg";
         this.type = type;
         this.cap = cap;
     }
