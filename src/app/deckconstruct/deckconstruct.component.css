@@ -17,6 +17,10 @@
     border-radius: 5px;    
 }
 
+#koifish{
+    width: 100%;
+}
+
 #pointcounter{
     font-family: fantasy;
     color:whitesmoke;
