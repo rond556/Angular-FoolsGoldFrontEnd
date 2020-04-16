@@ -12,20 +12,29 @@ export class DeckdisplayComponent implements OnInit {
   deck:Deck;
   cards:Array<Card>;
   cardDraw: Array<Card>;
+  images = ["downtownnightlife",
+            "floodedtown",
+            "mountainvilagecastle",
+            "twilighttemple",
+ ]
+  currentBackground = this.images[Math.floor(Math.random() * this.images.length)];
+  numberOfCards: Number;
 
   constructor(private deckService: DeckService) {
     this.deck = new Deck();
     //this.deck = this.deckService.getDeck();
     this.cards = this.deck.getCards();
+    this.numberOfCards = 8;
   }
 
   ngOnInit() {
+    this.changeImage();
   }
 
   drawCards(){
     this.cardDraw = new Array<Card>();
     this.cards = this.shuffle(this.cards);
-    for(let i = 0; i < 8; i++){
+    for(let i = 0; i < this.numberOfCards; i++){
       this.cardDraw.push(this.cards[i]);
     }
   }
@@ -37,4 +46,8 @@ export class DeckdisplayComponent implements OnInit {
   }
   return cards;
   }
+
+  changeImage() {
+    this.currentBackground = 'https://github.com/rond556/Angular-FoolsGoldFrontEnd/blob/master/src/assets/backgrounds/' + this.images[Math.floor(Math.random() * this.images.length)] + ".jpg?raw=true";
+   }
 }

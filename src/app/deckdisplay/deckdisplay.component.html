@@ -1,9 +1,16 @@
-<div id="my-container">
-<button class="drawCards" (click)="drawCards()">Draw Eight Cards</button>
-
-<div id="deckgrid" class="container">
-    <div class="grid-row">
-      <div *ngFor="let card of cardDraw">
-        <img src={{card.imageUrl}} id="cardImage" alt="card-image">
-</div>
+<div class="my-container" >
+  <div class="container" id="carddraw">
+    <p>How many cards will you draw?</p>
+    <input type="number" placeholder="Number of Cards" [(ngModel)]="this.numberOfCards">
+  </div>
+    <div *ngIf="this.numberOfCards < 41" >
+      <button class="drawCards" (click)="drawCards()">Draw</button>
+        <div id="deckgrid" class="container">
+          <div class="grid-row">
+            <div *ngFor="let card of cardDraw">
+              <img src={{card.imageUrl}} id="cardImage" alt="card-image">
+            </div>
+          </div>
+       </div>
+    </div>
 </div>
