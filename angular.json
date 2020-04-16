@@ -122,6 +122,12 @@
           }
         }
       }
-    }},
-  "defaultProject": "FoolsGoldFrontEnd"
+    }
+  },
+  "defaultProject": "FoolsGoldFrontEnd",
+  "schematics": {
+    "@schematics/angular:component": {
+      "styleext": "scss"
+    }
+  }
 }
