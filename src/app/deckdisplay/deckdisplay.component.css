@@ -3,6 +3,7 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    background-attachment: fixed;
   
 }
 
@@ -15,6 +16,7 @@
 #carddraw{
     padding-top: 30px;
     font-family: fantasy;
+    font-size: xx-large;
     text-align: center;
     display: block;
     margin-left: auto;
@@ -25,13 +27,21 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-    height: 300px;
     margin-top: 10%
 }
 
 #cardImage{
     width: 200px;
     border-radius: 5px;
+}
+
+#koi{
+    height: 300px;
+}
+
+#koi:hover{
+    position:relative; top: -5px;
+    box-shadow: 0px 0px 5px skyblue;
 }
 
 .grid-row {
