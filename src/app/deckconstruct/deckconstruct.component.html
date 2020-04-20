@@ -10,9 +10,9 @@
   </div>
   <div id="remainingcards">
     <p id="cardsremaining">Cards Remaining</p>
-    <p id="cardsnumber">{{15 - this.purchasedCards.length}}</p>
+    <p id="cardsnumber">{{32 - this.purchasedCards.length}}</p>
   </div>
-  <div id="koifish" *ngIf="purchasedCards.length < 16">
+  <div id="koifish" *ngIf="purchasedCards.length < 41 && this.skillpoint > 1">
     <a routerLink="/deckdisplay" (click)="createFullDeck()" routerLinkActive="active">
     <p>Purchase Deck</p>
     </a>
