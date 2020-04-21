@@ -1,0 +1,40 @@
+@font-face {
+  font-family: 'Dosis';
+  src: url('src/assets/fonts/bold/Dosis-Bold.woff2') format('woff2'),
+      url('src/assets/fonts/bold/Dosis-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Dosis';
+  src: url('src/assets/fonts/regular/Dosis-Regular.woff2') format('woff2'),
+      url('src/assets/fonts/regular/Dosis-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Dosis';
+  src: url('src/assets/fonts/black/Dosis-ExtraBold.woff2') format('woff2'),
+      url('src/assets/fonts/black/Dosis-ExtraBold.woff') format('woff');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Dosis';
+  src: url('src/assets/fonts/thin/Dosis-ExtraLight.woff2') format('woff2'),
+      url('src/assets/fonts/thin/Dosis-ExtraLight.woff') format('woff');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Dosis';
+  src: url('src/assets/fonts/light/Dosis-Light.woff2') format('woff2'),
+      url('src/assets/fonts/light/Dosis-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+

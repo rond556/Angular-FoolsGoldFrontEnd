@@ -24,8 +24,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css",
-              "src/assets/fonts/fonts-dosis.css"
+              "src/styles.scss"
             ],
             "scripts": []
           },
@@ -90,8 +89,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css",
-              "src/assets/fonts/fonts-dosis.css"
+              "src/styles.scss"
             ],
             "scripts": []
           }
