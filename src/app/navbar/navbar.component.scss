@@ -1,14 +1,23 @@
 .navbar{
     background-color: white;
-    height: 45px;
+    height: 155px;
+    width: 87%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-#homelogo{
-    padding-top: 8px;
-    float: left;
-}
-
-#aboutLink{
-    font-family: fantasy;
-    float: right;
+#wsite-title {
+    font-family: "Dosis" !important;
+    font-size: 70px;
+    font-weight: 400 !important;
+    color: #8d7824 !important;
+    text-transform: none !important;
+    letter-spacing: 4px !important;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px;
 }

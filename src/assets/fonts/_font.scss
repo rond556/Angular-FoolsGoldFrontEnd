@@ -38,3 +38,26 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Dosis';
+  src: url('src/assets/fonts/semi-bold/Dosis-SemiBold.woff2') format('woff2'),
+      url('src/assets/fonts/semi-bold/Dosis-SemiBold.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Karla';
+  src: url('src/assets/fonts/regular/Karla-Regular.woff2') format('woff2'),
+      url('src/assets/fonts/regular/Karla-Regular.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Karla';
+  src: url('src/assets/fonts/regular/Karla-Regular.woff2') format('woff2'),
+      url('src/assets/fonts/regular/Karla-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
