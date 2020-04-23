@@ -10,8 +10,8 @@
 #skeleton{
     width: 100%;
     display: block;
-  margin-left: auto;
-  margin-right: auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 h1{
@@ -128,7 +128,7 @@ h2{
     padding: 2px;
 }
 
-#deck-purchase{
+#purchase-button{
     text-decoration: none;
     text-align: center;
 }

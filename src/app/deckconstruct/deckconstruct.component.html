@@ -121,8 +121,8 @@
   </div>
 
 <div *ngIf="this.purchasedCards.length == 15" id="deck-purchase">
-  <a routerLink="deckdisplay" onclick="this.createFullDeck()">
-  <h2>PURCHASE THIS DECK</h2></a>
+  <a routerLink="deckdisplay" (click)="this.createFullDeck()" routerLinkActive="active">
+  <h2 id="purchase-button">PURCHASE THIS DECK</h2></a>
 </div>
   
 </div>

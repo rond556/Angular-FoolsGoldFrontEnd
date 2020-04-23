@@ -13,7 +13,7 @@
 
 #carddraw{
     padding-top: 30px;
-    font-family: fantasy;
+    font-family: "Dosis";
     font-size: xx-large;
     text-align: center;
     display: block;
@@ -31,10 +31,6 @@
 #cardImage{
     width: 200px;
     border-radius: 5px;
-}
-
-#koi{
-    height: 300px;
 }
 
 #koi:hover{
