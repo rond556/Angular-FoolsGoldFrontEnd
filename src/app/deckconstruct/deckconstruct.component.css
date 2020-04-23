@@ -113,13 +113,24 @@ h2{
     text-align: center;
 }
 
-.float-child-left{
-    float: left;
-}
 
 .addCard:hover{
     background-color: darkkhaki;
     position:relative; top: -5px;
+}
+
+#deckDisplay{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    background-color: beige;
+    padding: 2px;
+}
+
+#deck-purchase{
+    text-decoration: none;
+    text-align: center;
 }
 
 .grid-row {

@@ -75,39 +75,43 @@
 <div>
 <h2 id="deck-instructions">Click on the buttons below to add 15 cards to your Character Deck.</h2>
   <h3 id="skillpointsremain">Skill Points Remaining: {{this.skillPoints}}</h3>
-  <h3 id="cardsremaining">Cards Remaining: {{15 - this.purchasedCards.length}}</h3><br/>
+  <h3 id="cardsremaining">Cards Remaining: {{15 - this.purchasedCards.length}}</h3><br/><br/>
 </div>
 
+<br/>
+<br/>
+<br/>
+<br/>
 
-
-<div class="float-container">
-  
-  <div class="float-child-left">
+<div class="float-child-left">
+  <div class="grid-row">
     <div class="addCard" (click)="addCard(bodyCard)">
-      <p>BODY - 2 POINTS</p></div><br/>
+      <p>BODY - 2 POINTS</p></div>
     <div class="addCard" (click)="addCard(mindCard)">
-      <p>MIND - 2 POINTS</p></div><br/>
+      <p>MIND - 2 POINTS</p></div>
     <div class="addCard" (click)="addCard(faceCard)">
-      <p>FACE - 2 POINTS</p></div><br/>
+      <p>FACE - 2 POINTS</p></div>
     <div class="addCard" (click)="addCard(bodyMindCard)">
-      <p>BODY / MIND - 4 POINTS</p></div><br/>
+      <p>BODY / MIND - 4 POINTS</p></div>
     <div class="addCard" (click)="addCard(bodyFaceCard)">
-      <p>BODY / FACE - 4 POINTS</p></div><br/>
+      <p>BODY / FACE - 4 POINTS</p></div>
     <div class="addCard" (click)="addCard(mindFaceCard)">
-      <p>FACE / MIND - 4 POINTS</p></div><br/>
+      <p>FACE / MIND - 4 POINTS</p></div>
     <div class="addCard" (click)="addCard(bodyMindFaceCard)">
-      <p>MIND / BODY / FACE - 6 POINTS</p></div><br/>
+      <p>MIND / BODY / FACE - 6 POINTS</p></div>
     <div class="addCard" (click)="addCard(partialSuccessCard)">
-      <p>PARTIAL SUCCESS - 0 POINTS</p></div><br/>
+      <p>PARTIAL SUCCESS - 0 POINTS</p></div>
     <div class="addCard" (click)="addCard(bronzeSuccessCard)">
-      <p>BRONZE SUCCESS - 2 POINTS</p></div><br/>
+      <p>BRONZE SUCCESS - 2 POINTS</p></div>
     <div class="addCard" (click)="addCard(silverSuccessCard)">
-      <p>SILVER SUCCESS - 4 POINTS</p></div><br/>
+      <p>SILVER SUCCESS - 4 POINTS</p></div>
     <div class="addCard" (click)="addCard(failureCard)">
-      <p>FAILURE - 0 POINTS</p></div><br/>
+      <p>FAILURE - 0 POINTS</p></div>
+    </div>
 </div>
+<br/>
 
-<div class="float-child-right">
+
   <div id="deckDisplay" class="container">
     <div class="grid-row">
       <div *ngFor="let card of purchasedCards">
@@ -115,10 +119,10 @@
       </div>
     </div>
   </div>
-</div>
-</div>
+
 <div *ngIf="this.purchasedCards.length == 15" id="deck-purchase">
-  <h2>PURCHASE THIS DECK</h2>
+  <a routerLink="deckdisplay" onclick="this.createFullDeck()">
+  <h2>PURCHASE THIS DECK</h2></a>
 </div>
   
 </div>
