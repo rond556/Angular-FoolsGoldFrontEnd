@@ -1,9 +1,99 @@
 <div id="my-container">
-  <div class="container" id="village">
-    <img id="shopkeep" src="https://github.com/rond556/Angular-FoolsGoldFrontEnd/blob/master/src/assets/characters/nopperabou.png?raw=true">
-  </div>
+  <h1>FOOL'S GOLD CHARACTER DECK BUILDER</h1>
+    <img id="skeleton" src="https://github.com/rond556/Angular-FoolsGoldFrontEnd/blob/ron/src/assets/skeleton.jpg?raw=true">
+
   <div class="container" id="buttons">
 
+  
+<div class="container" id="deck-builder-description">
+  <h2>Build your Character Deck</h2>
+    <p>In many RPGs players interact with the game by rolling dice to decide the outcome of their characters’ actions. In Fool’s Gold instead of dice you use a deck of custom cards called the Character Deck. This deck is more than just a randomiser to determine success or failure; it is a way to visually represent your character’s strengths and weaknesses. You can use XP to upgrade or get new skills or you can upgrade your Character Deck by swapping in and out different kinds of cards.</p>
+    <p>To make a first level character deck you get 32 points to buy cards. Before spending any points to buy cards a first level character deck starts with the following cards:</p>
+    <ul id="pre-con-deck">
+      <li>3  Basic <span style="color: blue">Mind</span> Cards</li>
+      <li>3  Basic <span style="color: red">Body</span> Cards</li>
+      <li>3  Basic <span style="color: green">Face</span> Cards</li>
+      <li>3  Failure Cards</li>
+      <li>2  Partial Success Cards</li>
+      <li>10  Bronze Success Cards</li>
+      <li>1  Silver Success Card</li></ul>
+    <p>To these initial 25 cards you must add an extra 15 cards so that your Character Deck has 40 cards.</p>
+
+  <p>Your deck can’t have more than 40 cards except in special situations such as when the GM gives you Boons and Curses. See page ? for more details.</p>
+  <p>The  card types, their cost, and the cap (the limit to how many you can first add to your deck) are listed below:</p>
+
+  <table id="card-type-table" style="width:33%">
+    <tr>
+      <th>Card Type</th>
+      <th>Point Cost</th>
+      <th>Cap</th>
+    </tr>
+    <tr>
+      <td>Basic Attribute</td>
+      <td>2 points</td>
+      <td>8 cards of any type, 24 in total</td>
+    </tr>
+    <tr>
+      <td>Dual Attribute</td>
+      <td>4 points</td>
+      <td>4 cards of any type, 6 in total</td>
+    </tr>
+    <tr>
+      <td>Triple Attribute</td>
+      <td>6 points</td>
+      <td>2 cards in total</td>
+    </tr>
+    <tr>
+      <td>Partial Success</td>
+      <td>0 points</td>
+      <td>8 cards in total</td>
+    </tr>
+    <tr>
+      <td>Bronze Success</td>
+      <td>2 points</td>
+      <td>16 cards in total</td>
+    </tr>
+    <tr>
+      <td>Silver Success</td>
+      <td>4 points</td>
+      <td>3 cards in total</td>
+    </tr>
+    <tr>
+      <td>Gold Success*</td>
+      <td>8 points</td>
+      <td>1 card in total</td>
+    </tr>
+    <tr>
+      <td>Failure</td>
+      <td>0 points</td>
+      <td>6 cards in total</td>
+    </tr>
+  </table>
+
+
+<p>*Gold Success cards are not available during character creation and can only be bought by using XP with the exception being one shot games when the GM and players want to do a high powered game with very strong characters.</p>
+</div>
+<h2 id="deck-instructions">Click on the buttons below to add 15 cards to your Character Deck.
+</h2>
+
+
+<div class="float-container">
+  <div class="float-child">
+    <div class="addCard" (click)="addCard(bodyCard)">
+      BODY - 2 POINTS</div>
+    <div class="addCard" (click)="addCard(mindCard)">MIND - 2 POINTS</div>
+    <div class="addCard" (click)="addCard(faceCard)">FACE - 2 POINTS</div>
+    <div class="addCard" (click)="addCard(bodyCard)">BODY / MIND - 4 POINTS</div>
+    <div class="addCard" (click)="addCard(bodyCard)">BODY / FACE - 4 POINTS</div>
+    <div class="addCard" (click)="addCard(bodyCard)">FACE / MIND - 2 POINTS</div>
+    <div class="addCard" (click)="addCard(bodyCard)">MIND / BODY / FACE - 6 POINTS</div>
+    <div class="addCard" (click)="addCard(bodyCard)">PATIENCE - 0 POINTS</div>
+    <div class="addCard" (click)="addCard(bodyCard)">BRONZE SUCCESS - 2 POINTS</div>
+    <div class="addCard" (click)="addCard(bodyCard)">SILVER SUCCESS - 4 POINTS</div>
+    <div class="addCard" (click)="addCard(bodyCard)">FAILURE - 0 POINTS</div>
+  </div>
+</div>
+</div>
 <div class="container" id="pointcounter">
   <div id="skillpoints">
     <p id="skillpointsremain">Skill Points Remaining</p>
@@ -11,30 +101,12 @@
   </div>
   <div id="remainingcards">
     <p id="cardsremaining">Cards Remaining</p>
-    <p id="cardsnumber">{{32 - this.purchasedCards.length}}</p>
+    <p id="cardsnumber">{{15 - this.purchasedCards.length}}</p>
   </div>
   <div id="koifish" *ngIf="purchasedCards.length < 41 && this.skillpoint > 1">
     <a routerLink="/deckdisplay" (click)="createFullDeck()" routerLinkActive="active">
     <p>Purchase Deck</p>
     </a>
-  </div>
-</div>
-
-
-
-<div class="containers">
-<img class="addCard" src="{{this.coins[0].getImageURL()}}" (click)="addCard(bodyCard)">
-<img class="addCard" src="{{this.coins[1].getImageURL()}}" (click)="addCard(mindCard)">
-<img class="addCard" src="{{this.coins[2].getImageURL()}}" (click)="addCard(faceCard)">
-<img class="addCard" src="{{this.coins[3].getImageURL()}}" (click)="addCard(bodyFaceCard)">
-<img class="addCard" src="{{this.coins[4].getImageURL()}}" (click)="addCard(bodyMindCard)">
-<img class="addCard" src="{{this.coins[5].getImageURL()}}" (click)="addCard(mindFaceCard)">
-<img class="addCard" src="{{this.coins[6].getImageURL()}}" (click)="addCard(bodyMindFaceCard)">
-<img class="addCard" src="{{this.coins[7].getImageURL()}}" (click)="addCard(partialSuccessCard)">
-<img class="addCard" src="{{this.coins[8].getImageURL()}}" (click)="addCard(bronzeSuccessCard)">
-<img class="addCard" src="{{this.coins[9].getImageURL()}}" (click)="addCard(silverSuccessCard)">
-<img class="addCard" src="{{this.coins[10].getImageURL()}}" (click)="addCard(failureCard)">
-<img *ngIf="level >= 5" class="addCard" src="{{this.coins[11].getImageURL()}}" (click)="addCard(bodyCard)">
   </div>
 </div>
 

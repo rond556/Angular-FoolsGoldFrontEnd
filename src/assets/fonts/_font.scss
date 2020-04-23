@@ -61,3 +61,19 @@
   font-weight: normal;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'Droid Sans';
+  src: url('src/assets/fonts/regular/DroidSans.woff2') format('woff2'),
+      url('src/assets/fonts/regular/DroidSans.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Droid Sans';
+  src: url('src/assets/fonts/bold/DroidSans-Bold.woff2') format('woff2'),
+      url('src/assets/fonts/bold/DroidSans-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}

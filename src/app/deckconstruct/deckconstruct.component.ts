@@ -67,7 +67,7 @@ export class DeckconstructComponent implements OnInit {
     this.bronzeSuccessCard = new BronzeSuccessCard;
     this.silverSuccessCard = new SilverSuccessCard;
     this.goldSuccessCard = new GoldSuccessCard;
-    this.skillPoints = 15;
+    this.skillPoints = 32;
   }
 
   ngOnInit() {
