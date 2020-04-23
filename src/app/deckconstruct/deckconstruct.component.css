@@ -80,23 +80,48 @@ h2{
     border-radius: 5px;
 }
 
+#skillpointsremain{
+    float:left;
+    margin-left: 33%;
+}
+
+#cardsremaining{
+    float:right;
+    margin-right: 33%;
+}
+
+.float-container{
+    background-color: white;
+}
+
+
 .addCard{
     display: inline-block !important;
     background: #f4f0eb !important;
     min-width: 10px !important;
     min-height: 10px !important;
     height: auto !important;
-    padding: 2;
-    margin: 0 !important;
+    border-radius: 3px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     line-height: 1 !important;
     font-size: inherit !important;
     color: inherit !important;
     font-weight: 400 !important;
+    margin-left: 10%;
+    text-align: center;
+}
+
+.float-child{
+    float: left;
 }
 
 .addCard:hover{
     position:relative; top: -5px;
-    box-shadow: 0px 0px 5px yellow;
 }
 
 .grid-row {

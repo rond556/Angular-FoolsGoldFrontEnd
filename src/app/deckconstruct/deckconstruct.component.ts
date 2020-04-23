@@ -13,8 +13,6 @@ import { PartialSuccessCard } from 'src/models/cardmodels/partialsuccesscard';
 import { BronzeSuccessCard } from 'src/models/cardmodels/bronzesuccesscard';
 import { SilverSuccessCard } from 'src/models/cardmodels/silversuccess';
 import { GoldSuccessCard } from 'src/models/cardmodels/goldsuccess';
-import { Money } from 'src/models/moneymodels/moneyparent';
-import { Coins } from 'src/models/coins';
 import { DeckService } from "src/app/services/deck.service";
 
 @Component({
@@ -26,8 +24,6 @@ export class DeckconstructComponent implements OnInit {
   deck:Deck;
   cards:Array<Card>;
   purchasedCards:Array<Card>
-  money:Coins;
-  coins:Array<Money>;
 
   bodyCard:BodyCard;
   mindCard:MindCard;
@@ -50,8 +46,6 @@ export class DeckconstructComponent implements OnInit {
   constructor(private deckService: DeckService) {
     this.deck = new Deck;
     this.cards = this.deck.getCards();
-    this.money = new Coins;
-    this.coins = this.money.getCoins();
     this.purchasedCards = new Array<Card>();
     this.level = 1;
 
