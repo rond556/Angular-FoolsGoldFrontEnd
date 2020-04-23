@@ -90,9 +90,6 @@ h2{
     margin-right: 33%;
 }
 
-.float-container{
-    background-color: white;
-}
 
 
 .addCard{
@@ -116,11 +113,12 @@ h2{
     text-align: center;
 }
 
-.float-child{
+.float-child-left{
     float: left;
 }
 
 .addCard:hover{
+    background-color: darkkhaki;
     position:relative; top: -5px;
 }
 
