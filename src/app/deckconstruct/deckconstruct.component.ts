@@ -78,7 +78,7 @@ export class DeckconstructComponent implements OnInit {
     this.nameMap.set("Partial Success Card", 2);
     this.nameMap.set("Bronze Success Card", 10);
     this.nameMap.set("Silver Success Card", 1);
-
+    this.nameMap.set("Gold Success Card", 0);
 
   }
 
