@@ -31,6 +31,6 @@ export class Card{
     }
 
     getCap(){
-        return this.getCap;
+        return this.cap;
     }
 }

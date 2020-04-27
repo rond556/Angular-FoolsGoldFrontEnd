@@ -39,7 +39,10 @@ export class DeckconstructComponent implements OnInit {
   goldSuccessCard:GoldSuccessCard;
   skillPoints: number;
   level:number;
+  nameMap: Map<String, number>;
+  typeMap: Map<String, number>;
 
+  
   
   
 
@@ -62,6 +65,21 @@ export class DeckconstructComponent implements OnInit {
     this.silverSuccessCard = new SilverSuccessCard;
     this.goldSuccessCard = new GoldSuccessCard;
     this.skillPoints = 32;
+
+    this.nameMap = new Map();
+    this.nameMap.set("Body Card", 3);
+    this.nameMap.set("Mind Card", 3);
+    this.nameMap.set("Face Card", 3);
+    this.nameMap.set("Body/Mind Card", 0);
+    this.nameMap.set("Body/Face Card", 0);
+    this.nameMap.set("Mind/Face Card", 0);
+    this.nameMap.set("Body/Mind/Face Card", 0);
+    this.nameMap.set("Failure Card", 3);
+    this.nameMap.set("Partial Success Card", 2);
+    this.nameMap.set("Bronze Success Card", 10);
+    this.nameMap.set("Silver Success Card", 1);
+
+
   }
 
   ngOnInit() {
@@ -69,15 +87,21 @@ export class DeckconstructComponent implements OnInit {
   }
 
   addCard(card:Card){
-    if(this.skillPoints - card.getSkillPointValue() >= 0 && this.purchasedCards.length < 15){
+    if(this.skillPoints - card.getSkillPointValue() >= 0
+        && this.purchasedCards.length < 15
+            && card.getCap() > this.nameMap.get(card.getName())){
       this.purchasedCards.push(card);
       this.skillPoints -= card.getSkillPointValue();
+      this.addCapByName(card.getName());
+      console.log(this.nameMap.get(card.getName()));
     }
   }
   removeCard(card:Card){
     let index = this.purchasedCards.indexOf(card);
     this.skillPoints += card.getSkillPointValue();
     this.purchasedCards.splice(index,1);
+    this.removeCapByName(card.getName());
+    console.log(this.nameMap.get(card.getName()));
   }
 
   createFullDeck(){
@@ -86,5 +110,13 @@ export class DeckconstructComponent implements OnInit {
     }
     this.deck.setCards(this.cards);
     this.deckService.setDeck(this.deck);
+  }
+
+  addCapByName(cardName: String){
+    this.nameMap.set(cardName, this.nameMap.get(cardName) + 1);
+  }
+
+  removeCapByName(cardName: String){
+    this.nameMap.set(cardName, this.nameMap.get(cardName) - 1);
   }
 }

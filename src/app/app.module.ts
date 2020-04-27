@@ -8,17 +8,14 @@ import { AppComponent } from './app.component';
 import { DeckdisplayComponent } from './deckdisplay/deckdisplay.component';
 import { DeckconstructComponent } from './deckconstruct/deckconstruct.component';
 import { FormsModule } from '@angular/forms';
-import { NavbarComponent } from './navbar/navbar.component';
-import { AboutComponent } from './about/about.component';
-
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DeckdisplayComponent,
     DeckconstructComponent,
-    NavbarComponent,
-    AboutComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
