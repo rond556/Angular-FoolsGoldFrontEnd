@@ -1,0 +1,40 @@
+#healthdeckDisplay{
+    margin-top: 200px;
+
+}
+#cardImage{
+    width: 150px;
+}
+
+.grid-row {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+
+.addCard{
+    display: inline-block !important;
+    background: #f4f0eb !important;
+    min-width: 10px !important;
+    min-height: 10px !important;
+    height: auto !important;
+    border-radius: 3px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    line-height: 1 !important;
+    font-size: inherit !important;
+    color: inherit !important;
+    font-weight: 400 !important;
+    margin-left: 10%;
+    text-align: center;
+}
+
+
+.addCard:hover{
+    background-color: darkkhaki;
+    position:relative; top: -5px;
+}

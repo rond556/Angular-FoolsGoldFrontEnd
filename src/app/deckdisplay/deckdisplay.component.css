@@ -33,11 +33,6 @@
     border-radius: 5px;
 }
 
-#koi:hover{
-    position:relative; top: -5px;
-    box-shadow: 0px 0px 5px skyblue;
-}
-
 .grid-row {
     display: flex;
     flex-flow: row wrap;

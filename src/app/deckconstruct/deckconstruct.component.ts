@@ -93,7 +93,6 @@ export class DeckconstructComponent implements OnInit {
       this.purchasedCards.push(card);
       this.skillPoints -= card.getSkillPointValue();
       this.addCapByName(card.getName());
-      console.log(this.nameMap.get(card.getName()));
     }
   }
   removeCard(card:Card){
@@ -101,7 +100,6 @@ export class DeckconstructComponent implements OnInit {
     this.skillPoints += card.getSkillPointValue();
     this.purchasedCards.splice(index,1);
     this.removeCapByName(card.getName());
-    console.log(this.nameMap.get(card.getName()));
   }
 
   createFullDeck(){

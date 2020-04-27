@@ -9,6 +9,7 @@ import { DeckdisplayComponent } from './deckdisplay/deckdisplay.component';
 import { DeckconstructComponent } from './deckconstruct/deckconstruct.component';
 import { FormsModule } from '@angular/forms';
 import { FooterComponent } from './footer/footer.component';
+import { HealthdeckComponent } from './healthdeck/healthdeck.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { FooterComponent } from './footer/footer.component';
     DeckdisplayComponent,
     DeckconstructComponent,
     FooterComponent,
+    HealthdeckComponent,
   ],
   imports: [
     BrowserModule,
