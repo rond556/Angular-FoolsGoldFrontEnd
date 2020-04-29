@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { BodyCard } from 'src/models/cardmodels/bodycard';
-import { MindCard } from 'src/models/cardmodels/mindcard';
-import { FaceCard } from 'src/models/cardmodels/facecard';
-import { BronzeSuccessCard } from 'src/models/cardmodels/bronzesuccesscard';
-import { Card } from 'src/models/cardmodels/cardparent';
+import { BronzeHealthCard } from 'src/models/healthdeckcards.ts/bronzehealthcard';
+import { BodyHealthCard } from 'src/models/healthdeckcards.ts/bodyhealthcard';
+import { MindHealthCard } from 'src/models/healthdeckcards.ts/mindhealthcard';
+import { FaceHealthCard } from 'src/models/healthdeckcards.ts/facehealthcard';
+import { HealthDeck } from 'src/models/healthdeck';
+import { HealthCard } from 'src/models/healthdeckcards.ts/healthcardparent';
 
 @Component({
   selector: 'app-healthdeck',
@@ -12,42 +13,54 @@ import { Card } from 'src/models/cardmodels/cardparent';
 })
 export class HealthdeckComponent implements OnInit {
 
-  bodyCard:BodyCard;
-  mindCard:MindCard;
-  faceCard:FaceCard;
-  bronzeSuccessCard:BronzeSuccessCard;
-  healthDeck: Array<Card>;
+  healthDeck: HealthDeck;
+  bodyCard:BodyHealthCard;
+  mindCard:MindHealthCard;
+  faceCard:FaceHealthCard;
+  bronzeCard:BronzeHealthCard;
+  cards: Array<HealthCard>;
+  healthCardOptions: Array<HealthCard>;
 
   constructor() {
-    this.bodyCard = new BodyCard;
-    this.mindCard = new MindCard;
-    this.faceCard = new FaceCard;
-    this.bronzeSuccessCard = new BronzeSuccessCard;
-    this.healthDeck = new Array<Card>();
-    for(let i = 0; i < 2; i++){
-      this.healthDeck.push(new BodyCard);
-    }
-    for(let i = 0; i < 2; i++){
-      this.healthDeck.push(new MindCard);
-    }
-    for(let i = 0; i < 2; i++){
-      this.healthDeck.push(new FaceCard);
-    }
-    for(let i = 0; i < 4; i++){
-      this.healthDeck.push(new BronzeSuccessCard);
-    }
+    this.healthDeck = new HealthDeck;
+    this.cards = this.healthDeck.getCards();
+
+    this.bodyCard = new BodyHealthCard;
+    this.mindCard = new MindHealthCard;
+    this.faceCard = new FaceHealthCard;
+    this.bronzeCard = new BronzeHealthCard;
+
+    this.healthCardOptions = new Array<HealthCard>();
+    this.healthCardOptions.push(this.bodyCard);
+    this.healthCardOptions.push(this.mindCard);
+    this.healthCardOptions.push(this.faceCard);
+    this.healthCardOptions.push(this.bronzeCard);
   }
 
   ngOnInit() {
   }
 
-  removeCard(card:Card){
-    let index = this.healthDeck.indexOf(card);
-    this.healthDeck.splice(index,1);
+  removeCard(card:HealthCard){
+    let index;
+    for(let currentCard of this.cards){
+      if(card.getName() == currentCard.getName()){
+        index = this.cards.indexOf(currentCard);
+        this.cards.splice(index,1);
+        break;
+      }
+    }  
   }
 
-  addCard(card:Card){
-      this.healthDeck.push(card);
+  addCard(card:HealthCard){
+      this.cards.push(card);
+  }
+
+  changeCard(card: HealthCard){
+    if(card.getIndex() < 3){
+        return this.healthCardOptions[card.getIndex() + 1]
+    } else if (card.getIndex() == 3){
+        return this.healthCardOptions[0];
+    }
   }
 }
 
