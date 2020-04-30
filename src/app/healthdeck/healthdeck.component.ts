@@ -43,6 +43,7 @@ export class HealthdeckComponent implements OnInit {
   removeCard(card:HealthCard){
     let index;
     for(let currentCard of this.cards){
+      console.log(currentCard.getName())
       if(card.getName() == currentCard.getName()){
         index = this.cards.indexOf(currentCard);
         this.cards.splice(index,1);
@@ -51,16 +52,28 @@ export class HealthdeckComponent implements OnInit {
     }  
   }
 
+  
+
   addCard(card:HealthCard){
       this.cards.push(card);
   }
 
-  changeCard(card: HealthCard){
+  changeCard(card: HealthCard, index: number){
     if(card.getIndex() < 3){
+      this.cards[index] = this.healthCardOptions[card.getIndex() + 1];
+    } else if (card.getIndex() == 3){
+      this.cards[index] = this.healthCardOptions[0];
+    }
+    /*if(card.getIndex() < 3){
         return this.healthCardOptions[card.getIndex() + 1]
     } else if (card.getIndex() == 3){
         return this.healthCardOptions[0];
-    }
+    }*/
+  }
+  nameDebug(any){
+    console.log(any);
+
   }
 }
+
 

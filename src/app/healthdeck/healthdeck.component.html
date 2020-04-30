@@ -1,7 +1,7 @@
 <div id="healthdeckDisplay" class="container">
     <div class="grid-row">
-      <div *ngFor="let card of this.cards">
-        <img src={{card.imageUrl}} id="cardImage" alt="card-image" (click)="this.card = changeCard(this.card)">
+      <div id="deck" *ngFor="let card of this.cards; let i = index">
+        <img src={{card.imageUrl}} id="cardImage" alt="card-image" (click)="changeCard(this.card, i)">
       </div>
     </div>
   </div>
@@ -9,27 +9,27 @@
   <div class="add-card-buttons">
     <div class="grid-row">
       <div id="body-buttons">
-        <button class="addCard" (click)="addCard(bodyCard)">
+        <button class="addCard" (click)="addCard(this.bodyCard)">
           <p>+ BODY CARD</p></button>
-        <button class="addCard" (click)="removeCard(bodyCard)">
+        <button class="addCard" (click)="removeCard(this.bodyCard)">
           <p>- BODY CARD</p></button>
       </div>
       <div id="mind-buttons">
-        <button class="addCard" (click)="addCard(mindCard)">
+        <button class="addCard" (click)="addCard(this.mindCard)">
           <p>+ MIND CARD</p></button>
-        <button class="addCard" (click)="removeCard(mindCard)">
+        <button class="addCard" (click)="removeCard(this.mindCard)">
           <p>- MIND CARD</p></button>
       </div>
       <div id="face-buttons">
-        <button class="addCard" (click)="addCard(faceCard)">
+        <button class="addCard" (click)="addCard(this.faceCard)">
           <p>+ FACE CARD</p></button>
-        <button class="addCard" (click)="removeCard(faceCard)">
+        <button class="addCard" (click)="removeCard(this.faceCard)">
           <p>- FACE CARD</p></button>
       </div>
       <div id="bronze-button">
-        <button class="addCard" (click)="addCard(bronzeCard)">
+        <button class="addCard" (click)="addCard(this.bronzeCard)">
         <p>+ BRONZE CARD</p></button>
-        <button class="addCard" (click)="removeCard(bronzeCard)">
+        <button class="addCard" (click)="removeCard(this.bronzeCard)">
           <p>- BRONZE CARD</p></button>
       </div>
     </div>
