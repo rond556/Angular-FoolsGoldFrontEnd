@@ -1,5 +1,6 @@
 <div class="my-container" >
   <div class="container" id="carddraw">
+    <h1>PLAYER DECK</h1>
     <p>How many cards will you draw?</p>
     <input type="number" placeholder="Number of Cards" [(ngModel)]="this.numberOfCards">
   </div>
@@ -11,7 +12,7 @@
     </div>
  </div>
     <div *ngIf="this.numberOfCards < 41" >
-      <button class="drawCards" id="koi" (click)="drawCards()">DRAW!</button>
+      <button class="drawCards" id="draw" (click)="drawCards()">DRAW!</button>
     </div>
         
 </div>

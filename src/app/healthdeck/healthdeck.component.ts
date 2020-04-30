@@ -64,15 +64,6 @@ export class HealthdeckComponent implements OnInit {
     } else if (card.getIndex() == 3){
       this.cards[index] = this.healthCardOptions[0];
     }
-    /*if(card.getIndex() < 3){
-        return this.healthCardOptions[card.getIndex() + 1]
-    } else if (card.getIndex() == 3){
-        return this.healthCardOptions[0];
-    }*/
-  }
-  nameDebug(any){
-    console.log(any);
-
   }
 }
 
